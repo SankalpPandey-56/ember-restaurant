@@ -105,3 +105,11 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Keep the page from shifting when custom scrollbars appear */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+}
