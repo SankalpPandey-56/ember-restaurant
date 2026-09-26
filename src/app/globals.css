@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm near-black, never pure #000 */
+  --ink: #131009;
+  --ink-raised: #1a160f;
+  --line: #2b2519;
+
+  /* Warm cream typography */
+  --cream: #f2ebdd;
+  --sand: #a39885;
+
+  /* Restrained copper accent */
+  --copper: #c98a4b;
+  --copper-deep: #a96b36;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-raised: var(--ink-raised);
+  --color-line: var(--line);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-copper: var(--copper);
+  --color-copper-deep: var(--copper-deep);
+
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-jost), system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-jost), system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--copper);
+  color: var(--ink);
+}
